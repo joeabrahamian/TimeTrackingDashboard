@@ -1,80 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>⌛Time Tracking Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Profile box -->
+      <div class="profile-container card">
+        <div class="profile-first-half">
+          <img src="images/image-jeremy.png" alt="" />
+          <div class="profile-info">
+            <h2>Report for</h2>
+            <h1>Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="profile-second-half">
+          <ul>
+            <li><button id="daily-button">Daily</button></li>
+            <li><button id="weekly-button">Weekly</button></li>
+            <li><button id="monthly-button">Monthly</button></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Work Box -->
+      <div class="time-container card">
+        <div class="time-background work">
+          <img src="/images/icon-work.svg" class="card-img" alt="" />
+          <div class="activity">
+            <div class="activity-first-half">
+              <h1 id="work"></h1>
+              <button><img src="images/icon-ellipsis.svg" alt="" /></button>
+            </div>
+            <div class="activity-second-half">
+              <h1 id="current-work">32hrs</h1>
+              <p>Last Week - <span id="previous-work">36hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Play Box -->
+      <div class="time-container card">
+        <div class="time-background play">
+          <img src="/images/icon-play.svg" class="card-img" alt="" />
+          <div class="activity">
+            <div class="activity-first-half">
+              <h1 id="play"></h1>
+              <button><img src="images/icon-ellipsis.svg" alt="" /></button>
+            </div>
+            <div class="activity-second-half">
+              <h1 id="current-play">10hrs</h1>
+              <p>Last Week - <span id="previous-play">8hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <!-- Study Box -->
+      <div class="time-container card">
+        <div class="time-background study">
+          <img src="/images/icon-study.svg" class="card-img" alt="" />
+          <div class="activity">
+            <div class="activity-first-half">
+              <h1 id="study"></h1>
+              <button><img src="images/icon-ellipsis.svg" alt="" /></button>
+            </div>
+            <div class="activity-second-half">
+              <h1 id="current-study">4hrs</h1>
+              <p>Last Week - <span id="previous-study">7hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Exercise Box -->
+      <div class="time-container card">
+        <div class="time-background exercise">
+          <img src="/images/icon-exercise.svg" class="card-img" alt="" />
+          <div class="activity">
+            <div class="activity-first-half">
+              <h1 id="exercise"></h1>
+              <button><img src="images/icon-ellipsis.svg" alt="" /></button>
+            </div>
+            <div class="activity-second-half">
+              <h1 id="current-exercise">4hrs</h1>
+              <p>Last Week - <span id="previous-exercise">5hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Social Box -->
+      <div class="time-container card">
+        <div class="time-background social">
+          <img src="/images/icon-social.svg" class="card-img" alt="" />
+          <div class="activity">
+            <div class="activity-first-half">
+              <h1 id="social"></h1>
+              <button><img src="images/icon-ellipsis.svg" alt="" /></button>
+            </div>
+            <div class="activity-second-half">
+              <h1 id="current-social">5hrs</h1>
+              <p>Last Week - <span id="previous-social">10hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Self Care -->
+      <div class="time-container card">
+        <div class="time-background self">
+          <img src="/images/icon-self-care.svg" class="card-img" alt="" />
+          <div class="activity">
+            <div class="activity-first-half">
+              <h1 id="self-care"></h1>
+              <button><img src="images/icon-ellipsis.svg" alt="" /></button>
+            </div>
+            <div class="activity-second-half">
+              <h1 id="current-self-care">2hrs</h1>
+              <p>Last Week - <span id="previous-self-care">2hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
